@@ -1,0 +1,8 @@
+#!/Users/andresgentile/Documents/EY_learning/02_guerrero_en_entrenamiento/data_engineering_project/data_engineering_project_200726/venv/bin/python3.12
+# -*- coding: utf-8 -*-
+import re
+import sys
+from pip._internal.cli.main import main
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw|\.exe)?$', '', sys.argv[0])
+    sys.exit(main())
