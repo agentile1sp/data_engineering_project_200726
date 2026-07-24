@@ -62,6 +62,10 @@ def get_video_ids(playlistId):
     except requests.exceptions.RequestException as e:
         raise e
 
+
+def batch_list(video_id_list, batch_size):
+    for video_id in range(0, len(video_id_lst), batch_size):
+
 if __name__ == "__main__":
     playlistId = get_playlist_id()
     print(get_video_ids(playlistId))
