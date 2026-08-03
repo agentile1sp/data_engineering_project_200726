@@ -1,4 +1,5 @@
-from datetime import timedelta
+from datetime import timedelta, datetime
+
 def parse_duration(duration_str):
     duration_str = duration_str.replace("P", "").replace("T", "")
     components = ["D", "H", "M", "S"]
@@ -9,8 +10,8 @@ def parse_duration(duration_str):
             value, duration_str = duration_str.split(component)
             values[component] = int(value)
 
-    total_duraion = timedelta(
-        days=value["D"], hours=values["H"], minutes=values["M"], secondsays=values["s"]
+    total_duration = timedelta(
+        days=values["D"], hours=values["H"], minutes=values["M"], seconds=values["S"]
     )
 
     return total_duration

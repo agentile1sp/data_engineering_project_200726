@@ -2,9 +2,9 @@ import json
 from datetime import date
 import logging
 
-logger = logging.getlogger(__name__)
+logger = logging.getLogger(__name__)
 
-def load_path():
+def load_data():
     file_path = f"./data/YT_data_{date.today()}.json"
 
     try:
